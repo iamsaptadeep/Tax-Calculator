@@ -59,6 +59,6 @@ def calculate_new_regime_tax(income):
     return tax, rebate
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
 
