@@ -58,7 +58,6 @@ def calculate_new_regime_tax(income):
     rebate = 60000 if taxable_income <= 1200000 else 0
     return tax, rebate
 
-if __name__ == '__main__':
-    app.run()
-
+if __name__ == "__main__":
+    app.run(debug=True)
 
