@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="left">
+                <h3>Income Tax Slabs</h3>
+                <h4>New Tax Regime</h4>
+                <table>
+                    <tr>
+                        <th>Income Range (₹)</th>
+                        <th>Tax Rate</th>
+                    </tr>
+                    <tr>
+                        <td>Up to 4,00,000</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>4,00,001 - 8,00,000</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>8,00,001 - 12,00,000</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>12,00,001 - 16,00,000</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>16,00,001 - 20,00,000</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>20,00,001 - 24,00,000</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td>Above 24,00,000</td>
+                        <td>30%</td>
+                    </tr>
+                </table>
+                <h4>Old Tax Regime</h4>
+                <table>
+                    <tr>
+                        <th>Income Range (₹)</th>
+                        <th>Tax Rate</th>
+                    </tr>
+                    <tr>
+                        <td>Up to 2,50,000</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>2,50,001 - 5,00,000</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>5,00,001 - 7,50,000</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>7,50,001 - 10,00,000</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>10,00,001 - 12,50,000</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>12,50,001 - 15,00,000</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>Above 15,00,000</td>
+                        <td>30%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right">
+                <h2>Income Tax Calculator FY 2025-26</h2>
+                <label for="income">Enter Your Annual Income (₹):</label>
+                <input type="number" id="income" placeholder="Enter income" required>
+                <button id="calculateBtn">Calculate</button>
+                <div id="result">
+                    <p><strong>Old Regime Final Tax:</strong> ₹<span id="oldTax">0</span></p>
+                    <p><strong>New Regime Final Tax:</strong> ₹<span id="newTax">0</span></p>
+                    <p class="info">(Includes standard deduction & 4% cess)</p>
+                    <div id="savings"></div>
+                </div>
+                <canvas id="taxChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>As per 2025 Budget proposals, under the new tax regime, taxpayers with total income up to ₹12,00,000 qualify for a rebate of ₹60,000 under Section 87A. Meanwhile, the old regime continues to provide a rebate of ₹12,500 for income up to ₹5,00,000. Additionally, salaried individuals can claim a standard deduction of ₹50,000 under the old tax regime, whereas the new regime offers an enhanced deduction of ₹75,000. Health and education Cess at 4% is payable on the amount of income tax plus surcharge (if any).</p>
+    </footer>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
+
+
